@@ -1,0 +1,8 @@
+server {
+  server_name <%= node['hostname'] %>;
+
+  location / {
+    root /var/www/nilenso;
+    index index.html index.htm;
+  }
+}
