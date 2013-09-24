@@ -1,8 +1,7 @@
-#
-# Cookbook Name:: nilenso-cookbook
-# Recipe:: default
-#
-# Copyright (C) 2013 YOUR_NAME
-# 
-# All rights reserved - Do Not Redistribute
-#
+group node[:nilenso][:group]
+
+user node[:nilenso][:user] do
+  group node[:nilenso][:group]
+  system true
+  shell "/bin/bash"
+end
